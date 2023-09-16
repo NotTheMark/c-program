@@ -1,0 +1,47 @@
+using System;
+
+namespace RekurzivFaktorialis
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Kérem adja meg a pozitív egész számot (n):");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine(SzamolFaktorialis(n));
+            //long faktorialis = ;
+
+            //Console.WriteLine($"{n}! = {faktorialis}");
+            Console.WriteLine(fib(n));
+            Console.ReadLine();
+        }
+
+        static long SzamolFaktorialis(int n)
+        {
+            if (n == 0)
+            {
+                return 1; // Az 0 faktoriálisa 1
+            }
+            else
+            {
+                return n * SzamolFaktorialis(n - 1); // Rekurzív hívás
+            }
+        }
+        static long fib(int n)
+        {
+            if (n == 0)
+            {
+                return 0; // Az 0 faktoriálisa 1
+            }
+            if (n==1)
+            {
+                return 1;
+            }
+
+            else
+            {
+                return fib(n - 1)+fib(n-2); // Rekurzív hívás
+            }
+        }
+    }
+}
