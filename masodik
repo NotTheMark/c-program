@@ -16,6 +16,7 @@ namespace RekurzivFaktorialis
             Console.ReadLine();
         }
 
+EZ EGY UJ SZOVEG 
         static long SzamolFaktorialis(int n)
         {
             if (n == 0)
